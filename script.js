@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const content = document.querySelector('.scrolling-content');
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
-    const links = document.querySelectorAll('a');
   
   
     // Dark mode toggle event listener
