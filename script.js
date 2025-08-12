@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
     darkModeToggle.checked = false;
   }
 
-  // Listen for toggle changes
+
   darkModeToggle.addEventListener('change', function () {
     if (this.checked) {
-      // Light mode ON
+      // Light
       body.classList.add('light-mode');
       localStorage.setItem('theme', 'light');
     } else {
-      // Dark mode ON
+      // Dark
       body.classList.remove('light-mode');
       localStorage.setItem('theme', 'dark');
     }
