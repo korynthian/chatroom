@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>kChat - Index</title>
+    <title>kChat - [Placeholder for room name]</title> <!-- Tab Title (btw i shuld probby change this based on the room with JS) -->
     <meta charset="utf-8"> <!-- Dunno wut this duz -->
     <link rel="stylesheet" href="stylesheet.css"> <!-- my FAVORITE thing EVER: C. S. S. -->
 </head>
 <body>
+    <!-- Title -->
+    <h1>Room 1</h1>
+
+    <a href="/index.html" id="homeLink">Home</a>
 
     <!-- Dark Mode Switch -->
     <label class="switch">
@@ -13,18 +17,15 @@
         <span class="slider round"></span>
     </label>
 
-    <h1>Top 10</h1>
-    <a href="/chat.html#roomID=1">General</a>
-    <a href="/chat.html">smth</a>
-    <a href="/chat.html">smth</a>
-    <a href="/chat.html">smth</a>
-    <a href="/chat.html">smth</a>
-    <a href="/chat.html">smth</a>
-    <a href="/chat.html">smth</a>
-    <a href="/chat.html">smth</a>
-    <a href="/chat.html">smth</a>
-    <a href="/chat.html">smth</a>
-    <a href="/chat.html">smth</a>
+    <!-- Messages -->
+    <div class="messageContainer">
+        <p id="messageBox"> This should contain messages!</p>
+    </div>
+
+    <!-- Message Input -->
+    <div>
+        <input type="text" placeholder="Type Here" id="messageInput">
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script> <!-- Supabase stuff ig -->
     <script src="script.js"></script> <!-- YAAAAAAAAAAAAAAAAY JAVASCRIPT -->
