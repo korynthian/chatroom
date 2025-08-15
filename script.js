@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let room_id = window.location.href.split("#roomID=")[1];
     localStorage.setItem('room_id', room_id);
   }
-  else if (localStorage.getItem('room_id') && !window.location.href.includes("#roomID=")) {
+  else if (localStorage.getItem('room_id') && !window.location.href.includes("chat#roomID=")) {
     window.location.href = `/chat.html#roomID=${localStorage.getItem('room_id')}`;
   }
-  else if (!localStorage.getItem('room_id')) {
+  else if (!localStorage.getItem('room_id') && !window.location.href.includes("chat#roomID=") && window.location.href.includes("chat.html")) {
     let room_id = prompt("Which room?");
     localStorage.setItem('room_id', room_id || "1");
     window.location.href = `/chat.html#roomID=${room_id}`; // redirect to the room
