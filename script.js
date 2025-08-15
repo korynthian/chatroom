@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   else if (!localStorage.getItem('room_id')) {
     let room_id = prompt("Which room?");
     localStorage.setItem('room_id', room_id || "1");
-    window.location.href = `chatroom/chat.html#roomID=${room_id}`; // redirect to the room
+    window.location.href = `/chat.html#roomID=${room_id}`; // redirect to the room
   }
   const roomName = `Room ${localStorage.getItem('room_id')}`; // Later, query the SQL database for room details!!!
   document.title = `kChat - ${roomName}`;
@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
   }
   displayMessages(); // show on page load
-
   // input
   document.addEventListener("keydown", async (event) => {
     if (event.key === "Enter") {
