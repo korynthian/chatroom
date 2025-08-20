@@ -59,6 +59,8 @@ a:hover, a:active {
     text-align: left;
     line-height: 1.5em;
     padding: 2em;
+    max-height: 70vh;
+    overflow-y: auto;
 }
 
 /* Light mode styles */

@@ -53,6 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ask password for room. not implemented yet.
   //if (!localStorage.getItem())
+//scrool
+  function scrollToBottom() {
+    const container = document.querySelector('.messageContainer');
+    container.scrollTop = container.scrollHeight;
+}
+scrollToBottom();
 
   //display messages
   async function displayMessages() {
@@ -66,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         messageBox.innerHTML = data.map(msg => `<p class="message"><strong>${msg.username}</strong>: ${msg.content} <span class="timestamp" style="font-size: 0.8em; color: gray;">${new Date(msg.created_at).toLocaleString()}</span></p>`).join('') || "No messages yet."
       }
+    scrollToBottom();
   }
   displayMessages(); // show on page load
   // input
