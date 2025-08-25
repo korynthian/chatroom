@@ -49,8 +49,24 @@ a:hover, a:active {
     margin: 0.5em 0;
     border-radius: 1.5em;
     height: auto;
+    max-width: 100%;
+    word-wrap: break-word; 
+    img {
+      max-width: 85.9vw !important;
+      max-height: 49.9vh !important;
+      height: auto !important;
+      width: auto !important;
+      border-radius: 0.5em;
+      display: block;
+    }
 }
 
+
+
+.timestamp {
+  font-size: 0.8em;
+   color: gray;
+}
 .messageContainer {
     margin: 1%;
     margin-right: 10%;

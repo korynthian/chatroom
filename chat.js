@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // pick username. placeholder before i add passwords
   if (!localStorage.getItem('username')) {
     const username = prompt("Please enter your username:");
-    localStorage.setItem('username', username || "Secret"); // see im cool i used secret instead of anon
+    localStorage.setItem('username', username || "Secret");
   }
 
   // pick room to access
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = `/chat.html#roomID=${room_id}`; // redirect to the room
   }
 
-  let roomName = "[Placeholder]";
+  let roomName = "Loading Room Name...";
   async function fetchRoomName() {
     console.log("Fetching room name for ID:", Number(localStorage.getItem('room_id')));
     const { data, error } = await supabaseClient
@@ -53,14 +53,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ask password for room. not implemented yet.
   //if (!localStorage.getItem())
-//scrool
+  //scrool
   function scrollToBottom() {
     const container = document.querySelector('.messageContainer');
     container.scrollTop = container.scrollHeight;
-}
-scrollToBottom();
-
-  //display messages
+    console.log("Scrolled to bottom");
+  }
+  scrollToBottom();
+    //display messages
   async function displayMessages() {
     const { data, error } = await supabaseClient
       .from('messages')
@@ -70,12 +70,27 @@ scrollToBottom();
       if (error) {
         console.error('Error fetching messages:', error)
       } else {
-        messageBox.innerHTML = data.map(msg => `<p class="message"><strong>${msg.username}</strong>: ${msg.content} <span class="timestamp" style="font-size: 0.8em; color: gray;">${new Date(msg.created_at).toLocaleString()}</span></p>`).join('') || "No messages yet."
+        previousMessages = messageBox.innerHTML;
+        messageBox.innerHTML = 
+          data.map(msg => `<p class="message" id="message${msg.id}" >
+          <strong>${msg.username}</strong>: 
+          ${msg.content} 
+          <span class="timestamp">
+          ${new Date(msg.created_at).toLocaleString()}
+          </span></p>`)
+        .join('') || "No messages yet."        
+        console.log("Messages fetched successfully");
+        currentMessages = messageBox.innerHTML;
+        if (previousMessages !== currentMessages) {
+          scrollToBottom();
+        }
       }
-    scrollToBottom();
   }
   displayMessages(); // show on page load
   // input
+
+  setInterval(displayMessages, 1000);
+
   messageInput.addEventListener("keydown", async (event) => {
     if (event.key === "Enter") {
       const { data, error } = await supabaseClient
@@ -89,6 +104,7 @@ scrollToBottom();
         console.error('Error inserting message:', error)
       } else {
         console.log('Message inserted successfully:', messageInput.value);
+        scrollToBottom();
       }
       messageInput.value = "";
       displayMessages();
