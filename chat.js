@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <span class="timestamp">
           ${new Date(msg.created_at).toLocaleString()}
           </span></p>`)
-        .join('') || "No messages yet."        
+        .join('') || "No messages yet.";
         console.log("Messages fetched successfully");
         currentMessages = messageBox.innerHTML;
         if (previousMessages !== currentMessages) {
