@@ -2,34 +2,31 @@
 <html>
 <head>
     <title>kChat - Loading...</title> 
-    <meta charset="utf-8"> <!-- Dunno wut this duz -->
-    <link rel="stylesheet" href="stylesheet.css"> <!-- my FAVORITE thing EVER: C. S. S. -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/korynthian/chatroom/refs/heads/main/img/logo.ico">
 </head>
 <body>
-    <img id="Logo-Inline" src="https://github.com/korynthian/chatroom/blob/main/img/logo.png" alt="kChat Logo" height="60px">
-    <!-- Title -->
+    <img id="Logo-Inline" src="https://raw.githubusercontent.com/korynthian/chatroom/refs/heads/main/img/logo.png" alt="kChat Logo" height="60px">
+
     <h1 id="roomNameHeader"> This should contain the room title</h1>
 
     <a href="index.html" id="homeLink">Home</a>
 
-    <!-- Dark Mode Switch -->
     <label class="switch">
         <input type="checkbox" id="darkModeToggle">
         <span class="slider round"></span>
     </label>
 
-    <!-- Messages -->
     <div class="messageContainer">
         <p id="messageBox"> This should contain messages!</p>
     </div>
 
-    <!-- Message Input -->
     <div>
         <input type="text" placeholder="Type Here" id="messageInput">
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script> <!-- Supabase stuff ig -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script src="chat.js"></script> <script src="settings.js"></script>
 </body>
 </html>
