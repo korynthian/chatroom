@@ -3,7 +3,8 @@
 <head>
     <title>kChat - Loading...</title> 
     <meta charset="utf-8">
-    <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="stylesheet.css">
+
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/korynthian/chatroom/refs/heads/main/img/logo.ico">
 </head>
 <body>
@@ -12,21 +13,20 @@
     <h1 id="roomNameHeader"> This should contain the room title</h1>
 
     <a href="index.html" id="homeLink">Home</a>
+    <a target="_blank" href="settings.html" id="settingsLink">⚙</a>
 
-    <label class="switch">
-        <input type="checkbox" id="darkModeToggle">
-        <span class="slider round"></span>
-    </label>
+
 
     <div class="messageContainer">
         <p id="messageBox"> This should contain messages!</p>
     </div>
 
     <div>
-        <input type="text" placeholder="Type Here" id="messageInput">
+        <input type="text" placeholder="Type Here" class="textInput" id="messageInput">
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <script src="chat.js"></script> <script src="settings.js"></script>
+    <script src="chat.js"></script>
+    <script src="settings.js"></script>
 </body>
 </html>

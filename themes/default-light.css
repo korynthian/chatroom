@@ -1,0 +1,108 @@
+body {
+    background-color: #c3c3c5; /**/
+    color: #373737; /**/
+    font-family: Verdana, sans-serif;
+    padding-bottom: 50px;
+}
+
+a:link, a:visited, button {
+    background-color: rgb(170, 170, 170); /**/
+    color: #3d3d3d; /**/
+    padding: 20px 25px;
+    margin: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+}
+
+a:hover, a:active, button:hover {
+    background-color: #e0e0e0; /**/
+}
+
+#messageInput {
+    margin: 0 1% 1% 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 90%;
+    font-size: 2em;
+    text-align: left;
+    border-radius: 100px;
+    border: 0.5em outset rgb(0, 0, 0);
+    position: fixed;
+    bottom: 0;
+}
+
+#homeLink {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#settingsLink, #contactLink {
+    position: absolute;
+    top: 10px;
+    right: 120px;
+}
+
+.message {
+    background-color: #5f5f5f;
+    color: #c3c3c5;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0.5em 0;
+    border-radius: 1.5em;
+    height: auto;
+    max-width: 100%;
+    word-wrap: break-word;
+    img {
+        max-width: 85.9vw !important;
+        max-height: 49.9vh !important;
+        height: auto !important;
+        width: auto !important;
+        border-radius: 0.5em;
+        display: block;
+    }
+}
+
+#Logo {
+    margin: 10px;
+}
+
+#Logo-Inline {
+    position: absolute;
+    top: 13px;
+    right: 200px;
+}
+
+.timestamp {
+    font-size: 0.8em;
+    color: gray;
+}
+.messageContainer {
+    margin: 1%;
+    margin-right: 10%;
+    width: 90%;
+    font-size: 1.5em;
+    text-align: left;
+    line-height: 1.5em;
+    padding: 2em;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+#customCSS {
+    width: 93%;
+    padding-left: 5%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 1.2em;
+    text-align: left;
+    border-radius: 100px;
+    border: 0.5em outset rgb(0, 0, 0);
+}

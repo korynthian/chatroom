@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KChat - Settings</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/korynthian/chatroom/refs/heads/main/img/logo.ico">
+</head>
+<body>
+    <img id="Logo-Inline" src="https://raw.githubusercontent.com/korynthian/chatroom/refs/heads/main/img/logo.png" alt="kChat Logo" height="60px">
+
+    <h1> Settings</h1>
+    <p>You may need to reload for settings to take effect.</p>
+
+    <a href="index.html" id="homeLink">Home</a>
+    <a target="_blank" href="contact.html" id="contactLink">☎</a>
+
+    <hr>
+    <button id="changeUsername">Change username</button>
+    <hr>
+    <h2> Default Themes </h2>
+    <p><button id="darkDefaultThemeButton" class="themeSelector">Default (Dark)</button> </p>
+    <p><button id="lightDefaultThemeButton" class="themeSelector">Default (Light)</button> </p>
+    <p><button id="noThemeButton" class="themeSelector">Unstyled (NOT RECCOMENDED)</button> </p>
+    <p>More coming soon...</p>
+    </p>
+
+    <div id="customCSSBox">
+        <h3>Raw CSS
+            <button id="confirmCustomCSS"> Confirm Custom CSS</button></h3>
+        <textarea rows="200" cols="150"id="customCSS" class="textInput"></textarea>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>
