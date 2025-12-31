@@ -10,7 +10,22 @@ function confirmCustomCSS() {
     style.textContent = localStorage.getItem('CSS');
   }
   else {
-    window.open('settings.html', 'popupWindow');
+    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+      fetch('/themes/default-light.css')
+        .then(response => response.text())
+        .then(data => {
+          localStorage.setItem('CSS', data);
+          confirmCustomCSS();
+        })
+    }
+    else {
+      fetch('/themes/default-dark.css')
+        .then(response => response.text())
+        .then(data => {
+          localStorage.setItem('CSS', data);
+          confirmCustomCSS();
+        })
+    }
   }
   document.head.appendChild(style);
 }
