@@ -11,7 +11,7 @@ function confirmCustomCSS() {
   }
   else {
     if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-      fetch('/themes/default-light.css')
+      fetch('themes/default-light.css')
         .then(response => response.text())
         .then(data => {
           localStorage.setItem('CSS', data);
@@ -19,7 +19,7 @@ function confirmCustomCSS() {
         })
     }
     else {
-      fetch('/themes/default-dark.css')
+      fetch('themes/default-dark.css')
         .then(response => response.text())
         .then(data => {
           localStorage.setItem('CSS', data);

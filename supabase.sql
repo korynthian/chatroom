@@ -1,6 +1,3 @@
-I want to make a chat, with multiple rooms, usernames, and messages saved to supabase.
-
-Current SQL:
 -- WARNING: This schema is for context only and is not meant to be run.
 -- Table order and constraints may not be valid for execution.
 
@@ -19,4 +16,3 @@ CREATE TABLE public.rooms (
   created_at timestamp with time zone NOT NULL DEFAULT now(),
   CONSTRAINT rooms_pkey PRIMARY KEY (id)
 );
-
