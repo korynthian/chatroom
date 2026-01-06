@@ -1,7 +1,7 @@
 function confirmCustomCSS() {
   document.querySelectorAll('style, link[rel="stylesheet"]').forEach(style => style.remove());
   const style = document.createElement('style');
-  if (location.href.includes('/settings.html') && customCSS) {
+  if (location.href.includes('//settings/general.html') && customCSS) {
     const customCSS = document.getElementById('customCSS');
     localStorage.setItem('CSS', customCSS.value);
     style.textContent = customCSS.value;
